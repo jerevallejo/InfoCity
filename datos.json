@@ -1,5 +1,4 @@
-{
-	"marcadores": [
+[
 		{
 			"id": 1,
 			"name": "Universidad Nacional General Sarmiento",
@@ -10,7 +9,7 @@
 			"id": 2,
 			"name": "Asistencia Medica",
 			"location":[-34.5221554, -58.7000067],
-			"description":"primeros auxilios"
+			"description":"Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves."
 		},
 		{
 			"id": 3,
@@ -25,6 +24,6 @@
 			"description":"Informacion para turistas"
 		}
 		
-	]
-}
-https://www.youtube.com/watch?v=M4LaQ3KUGOM para hacer la lista con  los datos, solo falta el metodo apra dibujar los markets
+]
+
+      

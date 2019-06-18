@@ -58,6 +58,86 @@ function bootstrap() {
     // do some stuff…
   }
 
+  
+  console.log("dentro de la fun");
+
+  const xhttp = new XMLHttpRequest();
+
+  xhttp.open('GET', 'datos.json', true);
+
+  xhttp.send();
+
+  xhttp.onreadystatechange = function(){
+
+    if(this.readyState == 4 && this.status == 200){
+
+      //console.log(this.responseText);
+      let datos = JSON.parse(this.responseText);
+      //console.log(datos);
+      res.innerHTML = '';
+
+      for(let item of datos){
+        console.log(item.name);
+
+        res.innerHTML +=`
+        <li>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-text">${item.description}</p>
+                </div>
+            </div>
+        </li>
+        
+        `
+
+      }
+    }
+  }
+  
+
 
 }
 
+//https://www.youtube.com/watch?v=M4LaQ3KUGOM para hacer la lista con  los datos, solo falta el metodo apra dibujar los markets
+   /*   <div class="card" style="width: 20rem;">
+          <h2>Centros de Asistencia</h2>
+          <ul id="states">
+            <li id="mark1">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Asistencia Medica</h5>
+                  <p class="card-text">Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves.</p>
+                </div>
+              </div>
+            </li>
+            <li id="mark1">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Asistencia Policial</h5>
+                  <p class="card-text">Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves.</p>
+                </div>
+              </div>
+            </li>
+            <li id="mark1">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Oficina de Informes</h5>
+                  <p class="card-text">Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves.</p>
+                </div>
+              </div>
+            </li>
+            <li id="mark1">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Oficina de Informes</h5>
+                  <p class="card-text">Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves.</p>
+                </div>
+              </div>
+            </li>
+          
+          <button type="button" class="btn btn-lg btn-primary btn-lg btn-block" onclick="location.href='./index.html'">Home</button>
+          </ul>
+      </div>
+
+      */
