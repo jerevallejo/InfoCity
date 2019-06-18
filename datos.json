@@ -1,0 +1,30 @@
+{
+	"marcadores": [
+		{
+			"id": 1,
+			"name": "Universidad Nacional General Sarmiento",
+			"location":[-34.5221554, -58.7000067],
+			"description":"ungs"
+		},
+		{
+			"id": 2,
+			"name": "Asistencia Medica",
+			"location":[-34.5221554, -58.7000067],
+			"description":"primeros auxilios"
+		},
+		{
+			"id": 3,
+			"name": "Asistencia Policial",
+			"location":[-34.5221554, -58.7000067],
+			"description":"oficina policial"
+		},
+		{
+			"id": 4,
+			"name": "Asistencia al Viajero",
+			"location":[-34.5221554, -58.7000067],
+			"description":"Informacion para turistas"
+		}
+		
+	]
+}
+https://www.youtube.com/watch?v=M4LaQ3KUGOM para hacer la lista con  los datos, solo falta el metodo apra dibujar los markets
