@@ -1,0 +1,43 @@
+body {
+  font-family: Arial;
+}
+
+#mapid {
+  background: #CCC;
+  position: absolute;
+
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+
+  width: 75%;
+}
+
+
+#right {
+  position: absolute;
+
+  top: 5px;
+  right: -10px;
+  bottom: 0px;
+
+  width: 25%;
+}
+
+#states {
+  margin: 15px 15px;
+}
+#button{
+    list-style: none;
+    overflow: hidden;
+}
+
+ul {
+  
+}
+  ul li{
+    width: 18rem;
+    text-decoration: none;
+    display: block;
+    float: left;
+  }
