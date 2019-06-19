@@ -1,0 +1,29 @@
+[
+		{
+			"id": 1,
+			"name": "Universidad Nacional General Sarmiento",
+			"location":[-34.5221554, -58.7000067],
+			"description":"ungs"
+		},
+		{
+			"id": 2,
+			"name": "Asistencia Medica",
+			"location":[-34.523503, -58.714062],
+			"description":"Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves."
+		},
+		{
+			"id": 3,
+			"name": "Asistencia Policial",
+			"location":[-34.519177, -58.719890],
+			"description":"oficina policial"
+		},
+		{
+			"id": 4,
+			"name": "Asistencia al Viajero",
+			"location":[-34.532938, -58.701163],
+			"description":"Informacion para turistas"
+		}
+		
+]
+
+      
