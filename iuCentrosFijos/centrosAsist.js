@@ -1,8 +1,8 @@
 function bootstrap() {
 
-  var ungsLocation = ([-34.5221554, -58.7000067]);
+  //var ungsLocation = ([-34.5221554, -58.7000067]);
 
-  var map = L.map('mapid').setView(ungsLocation, 15);
+  var map = L.map('mapid').setView([-34.5221554, -58.7000067], 15);
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -35,7 +35,7 @@ function bootstrap() {
 
         res.innerHTML +=`
         <li>
-            <div class="card" style="width: 18rem; left: 15px">
+            <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">${item.name}</h5>
                   <p class="card-text">${item.description}</p>

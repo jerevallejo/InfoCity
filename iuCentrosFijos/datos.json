@@ -1,20 +1,20 @@
 [
 		{
 			"id": 1,
-			"name": "Universidad Nacional General Sarmiento",
-			"location":[-34.5221554, -58.7000067],
-			"description":"ungs"
+			"name": "Hospital",
+			"location":[-34.521306, -58.716997],
+			"description":"Hospital de complejidad media, con atencion a urgencias y guardia 24hs"
 		},
 		{
 			"id": 2,
 			"name": "Asistencia Medica",
-			"location":[-34.523503, -58.714062],
+			"location":[-34.515176, -58.703245],
 			"description":"Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves."
 		},
 		{
 			"id": 3,
 			"name": "Asistencia Policial",
-			"location":[-34.519177, -58.719890],
+			"location":[-34.527879, -58.707966],
 			"description":"oficina policial"
 		},
 		{
@@ -22,8 +22,17 @@
 			"name": "Asistencia al Viajero",
 			"location":[-34.532938, -58.701163],
 			"description":"Informacion para turistas"
-		}
-		
+		},
+		{
+			"id": 5,
+			"name": "Universidad Nacional General Sarmiento",
+			"location":[-34.5221554, -58.7000067],
+			"description":"ungs"
+		},			
+		{
+			"id": 6,
+			"name": "asd",
+			"location":[-34.5221554, -58.7099827],
+			"description":"ungs"
+		}	
 ]
-
-      
