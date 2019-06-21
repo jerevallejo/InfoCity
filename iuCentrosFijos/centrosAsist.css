@@ -3,14 +3,12 @@ body {
 }
 
 #mapid {
-  background: #CCC;
-  position: absolute;
+  float: left;
+  position: static;
+  height: 600px;
+  margin: 50px 30px 10px 10px;
+  width: 74%;
 
-  top: 0px;
-  bottom: 0px;
-  left: 0;
-
-  width: 75%;
 }
 
 
