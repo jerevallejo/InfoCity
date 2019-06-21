@@ -6,7 +6,7 @@ body {
   float: left;
   position: static;
   height: 600px;
-  margin: 50px 30px 10px 10px;
+  margin: 100px 50px 10px 30px;
   width: 74%;
 
 }
@@ -14,11 +14,11 @@ body {
 
 #right {
   position: absolute;
-
-  top: 5px;
-  right: -10px;
+  opacity:0.8; /* Opacidad 60% */
+  top: 30px;
+  right: -50px;
   bottom: 0px;
-
+  overflow: auto;
   width: 25%;
 }
 

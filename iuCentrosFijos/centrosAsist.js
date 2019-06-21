@@ -14,7 +14,7 @@ function bootstrap() {
   //creo la constante para realizar el llamado asincrónico
   const xhttp = new XMLHttpRequest();
   //se realiza un get, del archivo .json y la variable booleana indica que va a se asincrónico
-  xhttp.open('GET', 'datos.json', true);
+  xhttp.open('GET', 'infoCentrosAsist.json', true);
 
   xhttp.send();
 
