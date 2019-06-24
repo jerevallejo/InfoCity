@@ -6,8 +6,8 @@ body {
   float: left;
   position: static;
   height: 600px;
-  margin: 100px 50px 10px 30px;
-  width: 74%;
+  margin: 100px 40px 10px 40px;
+  width: 70%;
 
 }
 
@@ -16,7 +16,7 @@ body {
   position: absolute;
   opacity:0.8; /* Opacidad 60% */
   top: 30px;
-  right: -50px;
+  right: -30px;
   bottom: 0px;
   overflow: auto;
   width: 25%;
@@ -34,7 +34,7 @@ ul {
   
 }
   ul li{
-    width: 18rem;
+    width: 15rem;
     text-decoration: none;
     display: block;
     float: left;
