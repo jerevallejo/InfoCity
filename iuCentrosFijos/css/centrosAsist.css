@@ -1,0 +1,46 @@
+body {
+  font-family: Arial;
+}
+#header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  margin: 17px 40px 10px 15px;
+  opacity:0.8; /* Opacidad 80% */
+
+}
+
+#mapid {
+  float: left;
+  position: static;
+  height: 600px;
+  margin: 5px 40px 10px 40px;
+  width: 70%;
+
+}
+
+
+#right {
+  position: absolute;
+  opacity:0.8; /* Opacidad 80% */
+  top: 30px;
+  right: -30px;
+  bottom: 0px;
+  overflow: auto;
+  width: 25%;
+}
+
+#states {
+  margin: 15px 15px;
+}
+
+ul {
+  
+}
+  ul li{
+    width: 15rem;
+    text-decoration: none;
+    display: block;
+    float: left;
+  }

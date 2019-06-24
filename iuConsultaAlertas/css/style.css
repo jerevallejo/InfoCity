@@ -1,0 +1,25 @@
+#myMap{
+    height: 300px;
+    width: 300px;
+    border: solid 1px red;
+}
+
+#header{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  margin: 17px 40px 10px 160px;
+  opacity:0.8; /* Opacidad 80% */
+}
+#selector{
+	width: 40%;
+	margin: 20px 0px 0px 25px;
+	opacity:0.8; /* Opacidad 80% */
+}
+#contenedorcardComponent{
+	margin: 20px 0px 0px 25px;
+	opacity:0.9; /* Opacidad 80% */
+	margin-block-end: 15px;
+}
