@@ -3,36 +3,42 @@
 			"id": 1,
 			"name": "Hospital",
 			"location":[-34.521306, -58.716997],
+			"horario":"9am-18pm",
 			"description":"Hospital de complejidad media, con atencion a urgencias y guardia 24hs"
 		},
 		{
 			"id": 2,
 			"name": "Asistencia Medica",
 			"location":[-34.515176, -58.703245],
+			"horario":"10am-17pm",
 			"description":"Personal capasitado para realizar primeros auxilios y resolver incidentes no muy graves."
 		},
 		{
 			"id": 3,
 			"name": "Asistencia Policial",
-			"location":[-34.527879, -58.707966],
+			"location":[-34.527879, -58.707966],		
+			"horario":"9am-18pm",
 			"description":"oficina policial"
 		},
 		{
 			"id": 4,
 			"name": "Asistencia al Viajero",
-			"location":[-34.532938, -58.701163],
-			"description":"Informacion para turistas"
+			"location":[-34.532938, -58.701163],			
+			"horario":"9am-18pm",
+			"description":"Informacion para turistas para los viajeros sobre eventos, lugares de interes, atractivos turisticos y actividades"
 		},
 		{
 			"id": 5,
 			"name": "Universidad Nacional General Sarmiento",
-			"location":[-34.5221554, -58.7000067],
-			"description":"ungs"
+			"location":[-34.5221554, -58.7000067],			
+			"horario":"8am-22pm, de Lunes-Sabados",
+			"description":"Universidad nacional de la Ciudad, cuenta con micro-cien, afiteatro y sector de comidas"
 		},			
 		{
 			"id": 6,
-			"name": "asd",
-			"location":[-34.5221554, -58.7099827],
-			"description":"ungs"
+			"name": "Banco de la Ciudad",
+			"location":[-34.5221554, -58.7099827],			
+			"horario":"10am-15pm",
+			"description":"Banco de la ciudad, cuenta con cajero para realizar extracciones en cualquier divisas"
 		}	
 ]

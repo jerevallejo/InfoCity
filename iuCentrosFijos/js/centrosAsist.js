@@ -29,7 +29,7 @@ function bootstrap() {
 	 //dentro de el for vamos a cargar los datos que viene del archivo .json
 	 //para mostrar nombre, y descripcion y tambien dibujar los amrcadores correspondientes
 		for(let item of datos){
-			console.log(item.name);
+			console.log("dibujando:" + item.name);
 			res.innerHTML += drawCard(item);
 
 			cluster.addLayer(drawLayer(item));
@@ -49,6 +49,7 @@ function drawCard(item){
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">${item.name}</h5>
+					<p class="card-text">Horario: ${item.horario}</p>
 					<p class="card-text">${item.description}</p>
 				</div>
 			</div>
@@ -58,8 +59,11 @@ function drawCard(item){
 }
 
 function drawLayer(item){
-	var layer = L.marker([item.location[0], item.location[1]]).bindPopup("<b>" + item.name + "</b>" );
-				//map.panTo(new L.LatLng(item.location[0], item.location[1]));
+	var layer = L.marker([item.location[0], item.location[1]]).bindPopup(drawPopup(item));
 	return layer;
+}
 
+function drawPopup(item){
+	var popup = "<b>" + item.name + "</b> </br> </b> Horario: " +item.horario +"</b>";
+	return popup;
 }
