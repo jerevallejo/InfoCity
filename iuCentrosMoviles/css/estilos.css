@@ -1,0 +1,30 @@
+#header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  margin: 17px 40px 10px 170px;
+  opacity:0.8; /* Opacidad 80% */
+
+}
+
+#map {
+  float: left;
+  position: static;
+  height: 600px;
+  margin: 30px 30px 10px 10px;
+  width: 70%;
+
+}
+
+#right {
+  position: absolute;
+  opacity:0.8; /* Opacidad 80% */
+  margin: 30px 40px 10px 1140px;
+  overflow: auto;
+  width: 25%;
+}
+.containerMap{
+    width: 80vw;
+    height: 80vh;
+}
