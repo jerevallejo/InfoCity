@@ -22,20 +22,44 @@ function movilesRun(){
             }
              //console.log(trucks[0])
             trucks.map(truck => {
+
+                //console.log(trucks.length)
+                //for
                 //console.log(truck.id);
                 posiciones = truck.posiciones //[[lat,lon],[lat,lon]...]
                 velocidades = posiciones.map(x => 1000) //[500,500...]
-                //console.log(truck.posiciones[][2])
-                estados= truck.state//obtengo los estados por posicion, tengo que recorrerlo para poder usar la funcion que cambia la imagen
-                //yo creo que podmeos hacer un for que recorra los trucks que tenemos ene l map y por cada uno lo dibuje en el mapa , 
-                //con su estado y su popup correspondiente,
-                console.log(truck.state)
-               // console.log(getStateTruck(truck.state))
-                var p = L.Marker.movingMarker(posiciones,velocidades,{autostart: true,loop:true})
-                p.bindPopup(getDetalle(truck));
-                trucksLayer.addLayer(p)
+                var estado;
+                var icono;
+
+                //podemos poner un while o un case 
+                //while()
+                posiciones.map(pos => {
+                    console.log(pos[2])
+                    estado =pos[2]
+                    icono = drawStateTruck(pos[2])
+                    var p = L.Marker.movingMarker(posiciones,velocidades,{autostart: true,loop:true, icon:icono})
+                    p.bindPopup(getDetalle(truck, estado));
+                    p.on("mouseover", onMouseOver);
+                    p.on("mouseout", onMouseOut);
+                    trucksLayer.addLayer(p)
+                    })
 
             })
+
+                //})
+                    
+                //var driverMarker = L.marker(L.latLng(driver.position.lat,driver.position.lon), {icon: Config.getDriverIcon(driver.id)});
+                    
+                //console.log(posiciones)
+                //estados= 2
+                //detalle= 
+                //icono = drawStateTruck(2)
+                //console.log(icono)
+                //obtengo los estados por posicion, tengo que recorrerlo para poder usar la funcion que cambia la imagen
+                //yo creo que podmeos hacer un for que recorra los trucks que tenemos ene l map y por cada uno lo dibuje en el mapa , 
+                //con su estado y su popup correspondiente,
+                //console.log(truck.state)
+               // console.log(getStateTruck(truck.state))
         })
     }
 
@@ -53,15 +77,12 @@ function movilesRun(){
                     //console.log(res)
                     return res //va a retornar el estado por cada posicion
                 })
-                //console.log(state)
                 var positions = r.positions.map(p => {
                     var tmp = []
                     
                     tmp.push(p.position.lat)
                     tmp.push(p.position.lon)
                     tmp.push(p.state)
-                    //console.log(p.positions)
-                    //console.log(tmp)
                     return tmp //[[lat,lon, estado],[lat,lon, estado],[lat,lon, estado]...]
                     
                 })
@@ -69,34 +90,60 @@ function movilesRun(){
             })
     }
 
-    function getStateTruck(state_id){
+    getAllTrucks()
+
+}
+    function drawStateTruck(state_id){
         //0 es estado disponible 
         if( state_id == 0 ) {
-            return L.icon({iconUrl: '.././img/truck3.png', iconSize: [55,45], iconAnchor: [15,50],popupAnchor: [20,50]});
+            return L.icon({iconUrl: '.././img/icon.png', iconSize: [25, 25], iconAnchor: [15,15]});
         }
         //1 es estado  en servicio
         else if( state_id == 1 ) {
-            return L.icon({iconUrl: '.././img/truck1.png', iconSize: [50,30], iconAnchor: [15,50],popupAnchor: [20,50]});
+            return L.icon({iconUrl: '.././img/icon1.png', iconSize: [25, 25], iconAnchor: [15,15]});
         }
         //2 es estado no disponible  
-        else if( state_id == 121 ) {
-            return L.icon({iconUrl: '.././img/truck1.png', iconSize: [50,30], iconAnchor: [15,50],popupAnchor: [20,50]});
+        else if( state_id == 2 ) {
+            return L.icon({iconUrl: '.././img/icon2.png', iconSize: [25, 25], iconAnchor: [15,15]});
         }
     }
 
-    function getDetalle(truck){
+    function getDetalle(truck, state){
+
          var infoTruck = "<p>Movil: " + truck.id + " " 
-                            + "<br>Estado: " + truck.states_id
+                            + "<br>Estado: " + getEstado(state)
                             + "</p>";
         return infoTruck;
     }
 
-    function drawCardMovil{
+    function drawCardMovil(){
         //tenemos que hacer el emtodo que dibuja las tarjetas en la pantalla con la lsita d emoviles
         //y abajo la referencia de que significa cada estado o color
     }
 
-    getAllTrucks()
+    function getEstado(state){
+        var estado;
+        //0 es estado disponible 
+        if( state == 0 ) {
+            estado = "Disponible"
+            return estado
+        }
+        //1 es estado  en servicio
+        else if( state == 1 ) {
+            estado = "En servicio"
+            return estado
+        }
+        //2 es estado no disponible  
+        else if( state == 2 ) {
+            estado = "Fuera de servicio"
+            return estado
+        }
+    }
 
-
-}
+    // Funciones para manejar eventos sobre los markers
+    function onMouseOver(e) {
+        this.openPopup();
+      };
+      function onMouseOut(e) {
+        this.closePopup();
+      };
