@@ -23,15 +23,13 @@ function movilesRun(){
              //console.log(trucks[0])
             trucks.map(truck => {
 
-                //console.log(trucks.length)
-                //for
-                //console.log(truck.id);
                 posiciones = truck.posiciones //[[lat,lon],[lat,lon]...]
                 velocidades = posiciones.map(x => 1000) //[500,500...]
                 var estado;
                 var icono;
 
-                //podemos poner un while o un case 
+                //podemos poner un while o un case o un for con indice, para poder entrar en el array y recorrerlo con ese indiece 
+                
                 //while()
                 posiciones.map(pos => {
                     console.log(pos[2])
@@ -45,16 +43,6 @@ function movilesRun(){
                     })
 
             })
-
-                //})
-                    
-                //var driverMarker = L.marker(L.latLng(driver.position.lat,driver.position.lon), {icon: Config.getDriverIcon(driver.id)});
-                    
-                //console.log(posiciones)
-                //estados= 2
-                //detalle= 
-                //icono = drawStateTruck(2)
-                //console.log(icono)
                 //obtengo los estados por posicion, tengo que recorrerlo para poder usar la funcion que cambia la imagen
                 //yo creo que podmeos hacer un for que recorra los trucks que tenemos ene l map y por cada uno lo dibuje en el mapa , 
                 //con su estado y su popup correspondiente,
@@ -67,14 +55,10 @@ function movilesRun(){
         return fetch(supportTrucksURL+`${truck.id}`+positionsURL)
             .then(r => r.json())
             .then(r => {
-                //console.log(r.positions);
-                //console.log(r.positions);
                 var state = r.positions.map(p => {
                     var res = []
-                    //console.log(p.state);
                     
                     res.push(p.state)
-                    //console.log(res)
                     return res //va a retornar el estado por cada posicion
                 })
                 var positions = r.positions.map(p => {
@@ -144,6 +128,7 @@ function movilesRun(){
     function onMouseOver(e) {
         this.openPopup();
       };
-      function onMouseOut(e) {
+
+    function onMouseOut(e) {
         this.closePopup();
       };
