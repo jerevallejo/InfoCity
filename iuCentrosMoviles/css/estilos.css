@@ -20,7 +20,7 @@
 #right {
   position: absolute;
   opacity:0.8; /* Opacidad 80% */
-  margin: 30px 40px 10px 990px;
+  margin: 30px 40px 10px 1200px;/*cambie el ultimo valor por el monitor del trabajo*/
   overflow: auto;
   width: 25%;
 }
