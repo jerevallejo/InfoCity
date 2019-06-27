@@ -12,7 +12,7 @@
   float: left;
   position: static;
   height: 600px;
-  margin: 30px 30px 10px 10px;
+  margin: 30px 30px 10px 20px;
   width: 70%;
 
 }
@@ -20,7 +20,7 @@
 #right {
   position: absolute;
   opacity:0.8; /* Opacidad 80% */
-  margin: 30px 40px 10px 1140px;
+  margin: 30px 40px 10px 990px;
   overflow: auto;
   width: 25%;
 }

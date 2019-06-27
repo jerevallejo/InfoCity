@@ -1,7 +1,7 @@
 const cardComponent = data  => {
     return `
 
-            <div class="card bg-secondary" style="width: 95rem; margin-block-end: 15px;">
+            <div class="card bg-secondary" style="width: 80rem; margin-block-end: 15px;">
                 <div class="card-header">
                     <h5>${data.title}</h5>
                 </div>

@@ -1,9 +1,3 @@
-#myMap{
-    height: 300px;
-    width: 300px;
-    border: solid 1px red;
-}
-
 #header{
 
   display: flex;
@@ -14,11 +8,12 @@
   opacity:0.8; /* Opacidad 80% */
 }
 #selector{
-	width: 40%;
+	width: 80%;
 	margin: 20px 0px 0px 25px;
 	opacity:0.8; /* Opacidad 80% */
 }
 #contenedorcardComponent{
+  width: 20%;
 	margin: 20px 0px 0px 25px;
 	opacity:0.9; /* Opacidad 80% */
 	margin-block-end: 15px;

@@ -27,21 +27,43 @@ function movilesRun(){
                 velocidades = posiciones.map(x => 1000) //[500,500...]
                 var estado;
                 var icono;
+                var actual;
 
-                //podemos poner un while o un case o un for con indice, para poder entrar en el array y recorrerlo con ese indiece 
+                //podemos poner un while o un case o un for con indice, para poder entrar en el array 
+                //y recorrerlo con ese indiece 
                 
                 //while()
-                posiciones.map(pos => {
-                    console.log(pos[2])
-                    estado =pos[2]
-                    icono = drawStateTruck(pos[2])
+                console.log("NUEVO----")
+                //console.log(truck.posiciones.length)
+                for(var i=0; i<truck.posiciones.length; i++){
+                    console.log("muestra de cada uno su estado")
+                    //console.log(posiciones[i][2])
+                    estado = posiciones[i][2]
+                    icono = drawStateTruck(estado)
+                    console.log(estado)
+                    console.log(icono)
+                   //var p = L.marker(L.latLng( posiciones[i], {icon:icono}));
                     var p = L.Marker.movingMarker(posiciones,velocidades,{autostart: true,loop:true, icon:icono})
                     p.bindPopup(getDetalle(truck, estado));
-                    p.on("mouseover", onMouseOver);
-                    p.on("mouseout", onMouseOut);
                     trucksLayer.addLayer(p)
-                    })
 
+
+                    
+                    //icono = drawStateTruck(estado)
+
+                }
+                //posiciones.map(pos => {
+                    //console.log(pos)
+                    //console.log(pos[2])
+
+                 //  estado =pos[2]
+                
+                  //  icono = drawStateTruck(estado)
+                   // console.log(icono)
+                   // var p = L.Marker.movingMarker(posiciones,velocidades,{autostart: true,loop:true, icon:icono})
+                    //p.bindPopup(getDetalle(truck, estado));
+                    //trucksLayer.addLayer(p)
+                    //})
             })
                 //obtengo los estados por posicion, tengo que recorrerlo para poder usar la funcion que cambia la imagen
                 //yo creo que podmeos hacer un for que recorra los trucks que tenemos ene l map y por cada uno lo dibuje en el mapa , 
@@ -124,11 +146,3 @@ function movilesRun(){
         }
     }
 
-    // Funciones para manejar eventos sobre los markers
-    function onMouseOver(e) {
-        this.openPopup();
-      };
-
-    function onMouseOut(e) {
-        this.closePopup();
-      };
